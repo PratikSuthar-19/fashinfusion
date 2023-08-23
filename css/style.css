@@ -22,20 +22,21 @@ body{
     height: 100vh;
 }
 
-
+/* <==========side bar menu========> */
 .sidebar_menu{
     position: fixed;
     top: 0;
     left: -1000px;
     width: 25rem;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     
     display: flex;
     flex-direction: column;
    
     z-index: 11;
     font-size: small;
+    transition: all 1s ease;
 
 }
 
@@ -114,12 +115,222 @@ body{
     
     text-decoration: underline;
 }
+
+
+
+/* <=========search============> */
+.search_container{
+    height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 18.75rem;
+    position: fixed;
+    transition: all 1s linear;
+    top: -1000px;
+}
+
+
+.search_top{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    padding: 20px;
+
+}
+.search_top_right{
+    display: flex;
+   align-items: center;
+   background-color: whitesmoke;
+   gap: 10px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid black;
+}
+
+input[type="text"]{
+ color: black;
+ font-weight: 500;
+ height: 30px;
+ width: 700px;
+ outline: none;
+ border: none;
+ background-color: whitesmoke;
+}
+
+.cancel_ic{
+    padding-left: 50px;
+   padding-top: 5px;
+   font-size: larger;
+}
+
+.search_center p{
+  background-color: whitesmoke;
+  padding-left: 35px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.trending li{
+    background-color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+}
+
+.trending li:hover{
+    text-decoration: underline;
+}
+
+.search_bottom{
+    margin: 10px;
+    padding-left: 35px;
+   
+   
+}
+
+.cloth_img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cloths{
+    display: flex;
+   
+}
+.search_bottom p{
+    background-color: whitesmoke;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cloth{
+    margin :3px;
+  
+    /* animation-duration: 2s;
+    animation-direction: noraml; */
+    /* animation: animateCloth linear forwards 1s; */
+
+  
+   
+}
+.cloth:hover{
+    /* background-color: rgba(white, white, white, 0.5); */
+    opacity: 0.6;
+    border: 1px solid black;
+}
+
+
+
+.cloth h4 {
+    font-size: 12px;
+}
+.cloth h5 {
+    font-size: 12px;
+    padding-top: 0;
+}
+
+
+/* <=============cart===========> */
+
+.cartbar{
+    position: fixed;
+    top: 0;
+   right:-1000px;
+   /* right: 0; */
+    width: 25rem;
+    height: 100vh;
+    background-color: whitesmoke;
+    
+    display: flex;
+    flex-direction: column;
+   
+    z-index: 11;
+    transition: all 1s ease;
+}
+
+.cartbar_top{
+   display: grid;
+   grid-template-columns: 80% 20%;
+   
+   border-bottom: 1px solid black;
+}
+
+.cart_top_left{
+   font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.cart_top_right i{
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size:18px;
+}
+.cart_top_right i:hover{
+    opacity: 0.6;
+}
+
+.cart_ic{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 28px;
+}
+.p1{
+    text-align: center;
+    font-weight: 500;
+}
+
+.p2{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.cart_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+    /* width: 100px; */
+ 
+}
+.cart_btn button{
+    padding-left: 65px;
+    padding-right: 65px;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: black;
+   
+}
+.cart_btn button:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
 /* <======navbar==========> */
 
-  .window_scroll{
-  background-color: aliceblue;
+  /* .window_scroll{
+    background-color: aliceblue;
     color: black;
-}
+} */
 .navbar{
     display: grid;
     grid-template-columns: repeat( 3,1fr);
@@ -127,9 +338,11 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
-    /* background-color: aliceblue; */
     background: transparent;
     position: fixed;
+    z-index: 1;
+  
+   
 }
 
 .navbar_left{
@@ -137,6 +350,7 @@ body{
     margin: 1.875rem;
     gap: 2.5rem;
     color: aliceblue;
+   
 }
 
 .menu_icon i{
@@ -164,6 +378,12 @@ body{
     text-decoration: none;
   
 }
+#men{
+    color: aliceblue;
+}
+#women{
+    color: aliceblue;
+}
 
 .navbar_center a:hover{
     opacity: 0.7;
@@ -177,6 +397,7 @@ body{
     gap: 20px;
     margin-top: 0rem;
     font-size: small;
+    /* color: aliceblue; */
     color: aliceblue;
   
 

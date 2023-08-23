@@ -19,7 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- <===============swiper js===========> -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
 </head>
@@ -76,43 +82,182 @@
     <li><a href="#"></a>SALE</li>
    </ul>
 </div>
+<!-- 
+   <===========search============> -->
 
-    <!-- <div class="outer-container"> -->
+   <div class="search_container">
+
+      <div class="search_top">
+        <div class="search_top_right">
+            <div class="seach_ic">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="search_input">
+               <input type="text" placeholder="ENTER WHAT YOU ARE SEARCHING FOR">
+            </div>
+        </div>
+        <div class="serach_top_left">
+          <div class="cancel_ic">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="search_center">
+        <p>Trending</p>
+         <ul class="trending">
+            <li>Polo Men</li>
+            <li>Polo Men in Women</li>
+            <li>Polo Men In Men</li>
+            <li>Dress For Women</li>
+            <li>100 Lines Slim-Fit Shirt</li>
+         </ul>
+      </div>
+
+      
+      <div class="search_bottom mySwiper">
+        <p>TOP TREND SEARCHES</p>
         
 
+           <div class="cloths swiper-wrapper">
 
-        <!-- <===========nav bar=========> -->
-        <div class="navbar">
+               <div class="cloth swiper-slide">
+                   <div class="cloth_img">
+                    <img src="./assets/men_cloth_1.png">
+                   </div>
+                   <h4>CABLE_KNNET_POLO SWEATER<h4>
+                   <h5>3990.0 IR</h5>
+               </div>
 
-            <div class="navbar_left">
-                <div class="menu_icon">
-                   
-                    <i class="fa-solid fa-bars"></i>
+               <div class="cloth swiper-slide">
+                <div class="cloth_img">
+                 <img src="./assets/men_cloth_2.png">
                 </div>
-                <div class="logo">Massimo Dutti</div>
+                <h4>CABLE_KNNET_POLO SWEATER</h4>
+                <h5>3990.0 IR</h5>
             </div>
 
-
-            <div class="navbar_center">
-                <a href="index.html">MEN</a>
-                <a href="#">WOMEN</a>
-            </div>
-
-
-            <div class="navbar_right">
-                <div class="search_icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>SEARCH</p>
+            <div class="cloth swiper-slide">
+                <div class="cloth_img">
+                 <img src="./assets/men_cloth_3.png">
                 </div>
-                <div class="login">LOG IN</div>
-                <div class="cart">MY SHOPPING BASKET</div>
+                <h4>CABLE_KNNET_POLO SWEATER</h4>
+                <h5>3990.0 IR</h5>
             </div>
 
+            <div class="cloth swiper-slide">
+                <div class="cloth_img">
+                 <img src="./assets/men_cloth_4.png">
+                </div>
+                <h4>CABLE_KNNET_POLO SWEATER</h4>
+                <h5>3990.0 IR</h5>
+            </div>
+
+            <div class="cloth swiper-slide">
+                <div class="cloth_img">
+                 <img src="./assets/men_cloth_5.png">
+                </div>
+                <h4>CABLE_KNNET_POLO SWEATER</h4>
+                <h5>3990.0 IR</h5>
+            </div>
+<!-- 
+            <div class="cloth swiper-slide">
+                <div class="cloth_img">
+                 <img src="./assets/men_cloth_6.png">
+                </div>
+                <h4>CABLE_KNNET_POLO SWEATER</h4>
+                <h5>3990.0 IR</h5>
+            </div> -->
+          </div>
+       </div>
+ </div>
+
+
+ <!-- <===========cart===========> -->
+ <div class="cartbar">
+      <div class="cartbar_top">
+            <div class="cart_top_left">
+              <h4>BASKET</h4>
+            </div>
+          <div class="cart_top_right">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+      </div>
+      
+    
+        <div class="cart_ic">
+          <i class="fa-solid fa-bag-shopping"></i>
         </div>
+  
+       <p class="p1">Your Shopping Basket Is Empty</p>
+       <p class="p2">
+        See if your favourites are in your basket or add items from the new collection
+       </p>
+  
+       <div class="cart_btn">
+        <button>See New Collection</button>
+       </div>
+      
+ </div>
+        
+
+   <!-- <=======navbar=========> -->
+        <navbar>
+            <div class="navbar">
+
+                <div class="navbar_left">
+                    <div class="menu_icon">
+                       
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="logo">FASHION FUSION</div>
+                </div>
+    
+    
+                <div class="navbar_center">
+                    <a href="index.html" style="text-decoration: underline;" id="men">MEN</a>
+                    <a href="#" id="women">WOMEN</a>
+                </div>
+    
+    
+                <div class="navbar_right">
+                    <div class="search_icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>SEARCH</p>
+                    </div>
+                    <div class="login">LOG IN</div>
+                    <div class="cart">MY SHOPPING BASKET</div>
+                </div>
+    
+            </div>
+        </navbar>
+
+        <!-- <=========end of nav bar===========> -->
 
 
 
     <!-- </div> -->
+
     <script src="./app.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+
+        //   screensize >600 , for tablet and laptop
+          breakpoints :{
+            600:{
+                slidesPerView: 6,
+            }
+          }
+        });
+      </script>
 </body>
 </html>
